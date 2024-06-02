@@ -1,0 +1,13 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<section
+  class={`relative bg-white bg-opacity-30 rounded-md backdrop-filter backdrop-blur-sm ${className ? className : ""}`}
+>
+  <slot />
+</section>
