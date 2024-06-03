@@ -2,3 +2,34 @@
   font-family: "JejuHallasan";
   src: url("/fonts/JejuHallasan.ttf");
 }
+
+.infinite-bounce {
+  animation: infinite-bounce 3s infinite ease-in-out;
+}
+
+.show {
+  animation: show 1s ease-in-out;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes infinite-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

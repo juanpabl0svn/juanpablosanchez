@@ -16,5 +16,23 @@ const tiile = "hola mis amigos";
   <body class="bg-[linear-gradient(to_top,#82A0EE_0%,#4A5C88_80%)] min-h-dvh">
     <Header />
     <Main />
+    <script>
+      const $ = (element: string) => document.querySelector(element);
+      const $$ = (elements: string) => document.querySelectorAll(elements);
+
+      let i = 1;
+
+      $$(".blur-item").forEach((element) => {
+        element.addEventListener("animationend", (e: Event) => {
+          (e.target as HTMLElement).classList.remove("show");
+
+          (e.target as HTMLElement).removeEventListener(
+            "animationend",
+            () => {}
+          );
+        });
+        i++;
+      });
+    </script>
   </body>
 </html>
