@@ -3,6 +3,11 @@
   src: url("/fonts/JejuHallasan.ttf");
 }
 
+@font-face {
+  font-family: "jsMath";
+  src: url("/fonts/jsMath.woff");
+}
+
 .blur-item:nth-child(1) {
   --timing-show: 1.5s;
   --timing-bounce: 3.2s;
@@ -29,7 +34,7 @@
 }
 
 .icon {
-  stroke: rgba(255, 255, 255,.6);
+  stroke: rgba(255, 255, 255, 0.6);
 }
 
 .item {
