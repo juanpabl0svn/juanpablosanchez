@@ -21,7 +21,7 @@
   width: 40px;
   aspect-ratio: 1;
   border-radius: 50%;
-  transition: all 450ms ease-in-out;
+  transition: all 300ms ease-in-out;
   position: relative;
 
   &:hover {
@@ -33,9 +33,9 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    transition: all 200ms ease-in-out;
+    transition: all 300ms ease-in-out;
     background: var(--bg);
-    padding-inline: 3px;
+    padding-inline: 5px;
     border-radius: 5px;
     color: white;
 
