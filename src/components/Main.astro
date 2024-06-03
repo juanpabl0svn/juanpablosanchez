@@ -1,5 +1,9 @@
 ---
 import Blur from "./global/Blur.astro";
+import Github from "./svg/Github.astro";
+import LinkedIn from "./svg/LinkedIn.astro";
+import Whatsapp from "./svg/Whatsapp.astro";
+import Gmail from "./svg/Gmail.astro";
 ---
 
 <main
@@ -13,10 +17,22 @@ import Blur from "./global/Blur.astro";
       <h1 class="font-bold text-white">Software Developer</h1>
 
       <div class="flex justify-center gap-2 mt-16">
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
+        <a href="#" class="item github">
+          <span class="absolute opacity-0">Github</span>
+          <Github />
+        </a>
+        <a href="#" class="item whatsapp">
+          <span class="absolute opacity-0">Whatsapp</span>
+          <Whatsapp />
+        </a>
+        <a href="#" class="item linkedin">
+          <span class="absolute opacity-0">LinkedIn</span>
+          <LinkedIn />
+        </a>
+        <a href="#" class="item gmail">
+          <span class="absolute opacity-0">Gmail</span>
+          <Gmail />
+        </a>
       </div>
     </section>
   </Blur>
