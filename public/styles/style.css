@@ -3,16 +3,33 @@
   src: url("/fonts/JejuHallasan.ttf");
 }
 
-.infinite-bounce {
-  animation: infinite-bounce 3s infinite ease-in-out;
+.blur-item:nth-child(1) {
+  --timing-show: 1.5s;
+  --timing-bounce: 3.2s;
 }
 
-.show {
-  animation: show 1s ease-in-out;
+.blur-item:nth-child(2) {
+  --timing-show: 2.6s;
+  --timing-bounce: 3.8s;
+}
+
+.blur-item:nth-child(3) {
+  --timing-show: 1.4s;
+  --timing-bounce: 4s;
+}
+
+.blur-item:nth-child(4) {
+  --timing-show: 0.4s;
+  --timing-bounce: 3.4s;
+}
+
+.blur-item {
+  animation: show var(--timing-show, 1s) ease-in-out,
+    infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
 }
 
 .icon {
-  stroke: white;
+  stroke: rgba(255, 255, 255,.6);
 }
 
 .item {
@@ -24,8 +41,16 @@
   transition: all 300ms ease-in-out;
   position: relative;
 
+  & > svg {
+    transition: all 200ms ease-in-out;
+  }
+
   &:hover {
     background-color: var(--bg);
+
+    & > svg {
+      stroke: white;
+    }
   }
 
   & > span {
@@ -75,7 +100,7 @@
 @keyframes show {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;

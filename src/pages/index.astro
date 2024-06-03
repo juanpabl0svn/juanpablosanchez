@@ -23,19 +23,19 @@ const title = "Juan Pa Sánchez";
       const $ = (element: string) => document.querySelector(element);
       const $$ = (elements: string) => document.querySelectorAll(elements);
 
-      let i = 1;
+      // let i = 1;
 
-      $$(".blur-item").forEach((element) => {
-        element.addEventListener("animationend", (e: Event) => {
-          (e.target as HTMLElement).classList.remove("show");
+      // $$(".blur-item").forEach((element) => {
+      //   element.addEventListener("animationend", (e: Event) => {
+      //     (e.target as HTMLElement).classList.remove("show");
 
-          (e.target as HTMLElement).removeEventListener(
-            "animationend",
-            () => {}
-          );
-        });
-        i++;
-      });
+      //     (e.target as HTMLElement).removeEventListener(
+      //       "animationend",
+      //       () => {}
+      //     );
+      //   });
+      //   i++;
+      // });
     </script>
   </body>
 </html>
