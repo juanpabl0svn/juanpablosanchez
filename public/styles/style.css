@@ -36,6 +36,8 @@
   stroke: rgba(255, 255, 255, 0.6);
 }
 
+
+
 .item {
   display: grid;
   place-content: center;
