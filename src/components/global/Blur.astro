@@ -1,13 +1,18 @@
 ---
+import type { TransitionAnimationValue } from 'astro';
+
 interface Props {
   className?: string;
+  transitionName?: string;
 }
 
-const { className } = Astro.props;
+const { className, transitionName } =
+  Astro.props;
 ---
 
 <section
   class={`blur-item relative bg-white bg-opacity-30 rounded-2xl backdrop-filter backdrop-blur-sm shadow-[0_13px_20px_0_rgba(0,0,0,.2)] ${className ? className : ""}`}
+  transition:name={transitionName}
 >
   <slot />
 </section>

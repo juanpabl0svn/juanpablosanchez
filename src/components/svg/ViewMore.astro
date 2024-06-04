@@ -1,4 +1,13 @@
-<div
+---
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
   class="absolute right-5 top-3 flex flex-col items-center cursor-pointer transition-all duration-200 ease-in-out [&:hover>*]:text-white"
 >
   <svg
@@ -23,4 +32,4 @@
     class="text-[rgba(255,255,255,.6)] font-thin text-sm transition-all duration-200 ease-in-out"
     >More</span
   >
-</div>
+</a>

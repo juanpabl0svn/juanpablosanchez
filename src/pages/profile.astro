@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
-import Main from "../components/Main.astro";
 import { ViewTransitions } from "astro:transitions";
+import Profile from "../components/Profile.astro";
 
 const title = "Juan Pa Sánchez";
 ---
@@ -18,10 +18,11 @@ const title = "Juan Pa Sánchez";
   <body class="bg-[linear-gradient(to_top,#82A0EE_0%,#4A5C88_80%)] min-h-dvh">
     <ViewTransitions />
     <Header />
-    <Main />
+    <Profile/>
     <script>
       const $ = (element: string) => document.querySelector(element);
       const $$ = (elements: string) => document.querySelectorAll(elements);
+
     </script>
   </body>
 </html>

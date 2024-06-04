@@ -8,32 +8,48 @@ import ViewMore from "./svg/ViewMore.astro";
 ---
 
 <main
-
-id="home"
+  id="home"
   class="flex flex-wrap px-10 items-end h-full min-h-[400px] max-w-[1500px] mx-auto justify-center"
 >
   <Blur
-    className="w-[clamp(300px,50vw,600px)] h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] "
+    className="w-[clamp(300px,50vw,600px)] h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;]"
+    transitionName="profile"
   >
-    <ViewMore />
+    <ViewMore href="/profile" />
     <img src="/avatar.PNG" alt="avatar" class="h-36 aspect-square rounded-md" />
     <section class="w-full h-36 text-center">
       <h1 class="font-bold text-white font-jsMath">Software Developer</h1>
 
       <div class="flex justify-center gap-2 mt-16">
-        <a href="#" class="item github">
+        <a
+          target="_blank"
+          href="https://github.com/juanpabl0svn"
+          class="item github"
+        >
           <span class="absolute opacity-0">Github</span>
           <Github />
         </a>
-        <a href="#" class="item whatsapp">
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send/?phone=573004353401&text&type=phone_number&app_absent=0"
+          class="item whatsapp"
+        >
           <span class="absolute opacity-0">Whatsapp</span>
           <Whatsapp />
         </a>
-        <a href="#" class="item linkedin">
+        <a
+        target="_blank"
+          href="https://www.linkedin.com/in/juan-pablo-sanchez-villegas/"
+          class="item linkedin"
+        >
           <span class="absolute opacity-0">LinkedIn</span>
           <LinkedIn />
         </a>
-        <a href="#" class="item gmail">
+        <a
+          target="_blank"
+          href="mailto:juanpablo@yconsultores.com"
+          class="item gmail"
+        >
           <span class="absolute opacity-0">Gmail</span>
           <Gmail />
         </a>

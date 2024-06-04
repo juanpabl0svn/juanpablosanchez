@@ -9,7 +9,7 @@
 }
 
 .blur-item:nth-child(1) {
-  --timing-show: 1.5s;
+  --timing-show: 1.2s;
   --timing-bounce: 3.2s;
 }
 
@@ -19,18 +19,17 @@
 }
 
 .blur-item:nth-child(3) {
-  --timing-show: 1.4s;
+  --timing-show: 2.8s;
   --timing-bounce: 4s;
 }
 
 .blur-item:nth-child(4) {
-  --timing-show: 0.4s;
+  --timing-show: 2s;
   --timing-bounce: 3.4s;
 }
 
 .blur-item {
-  animation: show var(--timing-show, 1s) ease-in-out,
-    infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
+  animation: infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
 }
 
 .icon {
