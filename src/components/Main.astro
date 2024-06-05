@@ -9,14 +9,14 @@ import ViewMore from "./svg/ViewMore.astro";
 
 <main
   id="home"
-  class="flex flex-wrap px-10 items-end h-full min-h-[400px] max-w-[1500px] mx-auto justify-center"
+  class="flex flex-wrap px-10 items-end h-full min-h-[400px] max-w-[1500px] mx-auto justify-center lg:gap-0 gap-10"
 >
   <Blur
-    className="w-[clamp(300px,50vw,600px)] h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;]"
+    className=" h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] lg:w-[clamp(300px,50vw,600px)] mt-10 lg:mt-0"
     transitionName="profile"
   >
     <ViewMore href="/profile" />
-    <img src="/avatar.PNG" alt="avatar" class="h-36 aspect-square rounded-md" />
+    <img src="/avatar.PNG" alt="avatar" class="h-36 aspect-square rounded-sm" />
     <section class="w-full h-36 text-center">
       <h1 class="font-bold text-white font-jsMath">Software Developer</h1>
 
@@ -38,7 +38,7 @@ import ViewMore from "./svg/ViewMore.astro";
           <Whatsapp />
         </a>
         <a
-        target="_blank"
+          target="_blank"
           href="https://www.linkedin.com/in/juan-pablo-sanchez-villegas/"
           class="item linkedin"
         >
@@ -57,7 +57,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(300px,50vw,600px)] ml-10 h-[140px] flex items-center px-8 mb-5 show infinite-bounce [animation-delay:230ms;] "
+    className="w-[clamp(300px,50vw,600px)] lg:ml-10  h-[140px] flex items-center px-8 mb-5 show infinite-bounce [animation-delay:230ms;] "
   >
     <section class="w-full h-20 text-center">
       <h1 class="font-bold text-white">Software Developer</h1>
@@ -71,7 +71,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(450px,70vw,800px)] ml-10 h-[340px] flex items-center px-8 mt-20 show infinite-bounce [animation-delay:340ms;] "
+    className="w-[clamp(450px,70vw,800px)] lg:ml-10 h-[340px] flex items-center px-8 lg:mt-20 show infinite-bounce [animation-delay:340ms;] "
   >
     <section class="w-full h-20 text-center">
       <h1 class="font-bold text-white">Software Developer</h1>
@@ -85,7 +85,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(200px,20vw,300px)] ml-28 mb-10 h-[340px] flex items-center px-8 mt-20 show infinite-bounce [animation-delay:300ms;] "
+    className="w-[clamp(300px,20vw,300px)] lg:ml-28 mb-10 h-[340px] flex items-center px-8 mt-20 show infinite-bounce [animation-delay:300ms;] "
   >
     <section class="w-full text-center">
       <h1 class="font-bold text-white">Software Developer</h1>
