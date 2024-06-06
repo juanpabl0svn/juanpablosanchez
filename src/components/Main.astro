@@ -9,14 +9,14 @@ import ViewMore from "./svg/ViewMore.astro";
 
 <main
   id="home"
-  class="flex flex-wrap px-10 items-end h-full min-h-[400px] max-w-[1500px] mx-auto justify-center lg:gap-0 gap-10 absolute inset-0 mt-24 max-h-[800px] overflow-y-auto "
+  class="flex flex-wrap px-10 items-center h-full min-h-[400px] max-w-[1500px] mx-auto justify-center lg:gap-0 gap-10 absolute inset-0 max-h-[800px] overflow-y-auto mt-24 "
 >
   <Blur
-    className=" h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] lg:w-[clamp(200px,40vw,600px)] mt-10 lg:mt-0"
+    className=" h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] lg:w-[clamp(200px,40vw,600px)]"
     transitionName="profile"
   >
     <ViewMore href="/profile" />
-    <img src="/avatar.PNG" alt="avatar" class="h-36 aspect-square rounded-sm" />
+    <img src="/avatar.PNG" alt="avatar" class="h-36 aspect-square rounded-sm" transition:name="me"/>
     <section class="w-full h-36 text-center">
       <h1 class="font-bold text-white font-jsMath">Software Developer</h1>
 
@@ -71,7 +71,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(400px,50vw,800px)] lg:ml-10 h-[340px] flex items-center px-8 lg:mt-20 show infinite-bounce [animation-delay:340ms;] "
+    className="w-[clamp(400px,50vw,800px)] lg:ml-10 h-[270px] flex items-center px-8 lg:mt-20 show infinite-bounce [animation-delay:340ms;] "
   >
     <section class="w-full h-20 text-center">
       <h1 class="font-bold text-white">Software Developer</h1>
@@ -85,7 +85,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(200px,20vw,300px)] lg:ml-28 mb-10 h-[240px] flex items-center px-8 md:mt-20 show infinite-bounce [animation-delay:300ms;] "
+    className="w-[clamp(200px,20vw,300px)] lg:ml-28 mb-10 h-[240px] flex items-center px-8 md:mt-0 mt-20 show infinite-bounce [animation-delay:300ms;] "
   >
     <section class="w-full text-center">
       <h1 class="font-bold text-white">Software Developer</h1>

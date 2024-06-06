@@ -3,7 +3,42 @@ import Blur from "../components/global/Blur.astro";
 import ViewLess from "./svg/ViewLess.astro";
 ---
 
-<Blur transitionName="profile" className="mx-10 mt-10 min-h-[80vh] h-full">
+<Blur
+  transitionName="profile"
+  className="mx-10 mt-10 min-h-[80vh] h-full grid place-content-center"
+>
   <ViewLess />
-  asdf
+
+  <article class="flex flex-col w-full gap-2 px-20 lg:flex-row">
+    <img src="/avatar.PNG" alt="" transition:name="me" class="rounded-md" />
+
+    <ul>
+      <li>
+        <span class="font-bold">Nombre:</span> Juan Pablo Sanchez Villegas
+      </li>
+      <li>
+        <span class="font-bold">Nacionalidad:</span> Colombia
+      </li>
+      <li id="age">
+        <span class="font-bold">Fecha de nacimiento:</span> 17/03/2024
+      </li>
+      <li>
+        <span class="font-bold">Nombre:</span> Juan Pablo Sanchez Villegas
+      </li>
+      <li class="mt-10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias saepe
+        sint explicabo nisi doloribus repellendus quod quo, laudantium
+        reiciendis hic provident velit aliquam nam, delectus placeat consectetur
+        sapiente voluptate? Repellendus?
+      </li>
+    </ul>
+  </article>
 </Blur>
+
+<script>
+  const age = document.getElementById("age") as HTMLLIElement;
+  const birthDateYear = 2003;
+  const todayYear = new Date().getFullYear();
+  const ageInYears = todayYear - birthDateYear;
+  age.innerHTML += `(${Math.floor(ageInYears).toString()} años)`;
+</script>
