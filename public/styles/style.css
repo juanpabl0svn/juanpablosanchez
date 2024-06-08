@@ -16,6 +16,9 @@ html {
   background: linear-gradient(to top, #82a0ee 0%, #4a5c88 100%);
   min-height: 100vh;
   height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 body {
