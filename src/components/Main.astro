@@ -86,10 +86,22 @@ import ViewMore from "./svg/ViewMore.astro";
     <ViewMore href="/profile" />
 
     <section class="w-full h-20 flex gap-2 items-center justify-center">
-      <div class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"></div>
-      <div class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"></div>
-      <div class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"></div>
-      <div class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"></div>
+      <div
+        class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"
+      >
+      </div>
+      <div
+        class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"
+      >
+      </div>
+      <div
+        class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"
+      >
+      </div>
+      <div
+        class="bg-white h-32 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out"
+      >
+      </div>
     </section>
   </Blur>
   <Blur
@@ -110,3 +122,26 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
 </main>
+
+<script>
+  let isFirstJoin: string | boolean | null =
+    sessionStorage.getItem("isFirstJoin");
+
+  if (isFirstJoin == null) {
+    isFirstJoin = true;
+  } else {
+    isFirstJoin = false;
+  }
+
+  const blurs = document.querySelectorAll(".blur-item");
+
+  blurs.forEach((blur) => {
+    if (isFirstJoin) {
+      blur.classList.add("blur-fade-in");
+    } else {
+      blur.classList.add("blur-bounce");
+    }
+  });
+
+  sessionStorage.setItem("isFirstJoin", "false");
+</script>
