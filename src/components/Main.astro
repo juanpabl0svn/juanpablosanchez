@@ -138,10 +138,22 @@ import ViewMore from "./svg/ViewMore.astro";
   blurs.forEach((blur) => {
     if (isFirstJoin) {
       blur.classList.add("blur-fade-in");
-    } else {
-      blur.classList.add("blur-bounce");
-    }
+    } 
   });
 
   sessionStorage.setItem("isFirstJoin", "false");
+
+  function restartAnimation() {
+    const animatedElements = document.querySelectorAll(".blur-item");
+    if (animatedElements) {
+      animatedElements.forEach((element) => {
+        (element as HTMLElement).style.animation = "none";
+
+        (element as HTMLElement).offsetHeight;
+        (element as HTMLElement).style.animation = "";
+      });
+    }
+  }
+
+  window.addEventListener("astro:render", restartAnimation);
 </script>

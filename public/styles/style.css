@@ -100,13 +100,13 @@ body {
   --timing-bounce: 3.4s;
 }
 
+.blur-item {
+  animation: infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
+}
+
 .blur-fade-in {
   animation: show var(--timing-show, 1.2s) ease-in-out,
     infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
-}
-
-.blur-bounce {
-  animation: infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
 }
 
 .icon {
