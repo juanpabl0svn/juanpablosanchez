@@ -5,6 +5,12 @@ import LinkedIn from "./svg/LinkedIn.astro";
 import Whatsapp from "./svg/Whatsapp.astro";
 import Gmail from "./svg/Gmail.astro";
 import ViewMore from "./svg/ViewMore.astro";
+
+interface Props {
+  fadeInEffect?: boolean;
+}
+
+const { fadeInEffect = false }: Props = Astro.props;
 ---
 
 <main
@@ -12,7 +18,7 @@ import ViewMore from "./svg/ViewMore.astro";
   class="flex flex-wrap px-10 items-center h-full min-h-[400px] max-w-[1500px] mx-auto justify-center lg:gap-0 gap-10 mt-14"
 >
   <Blur
-    className=" h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] lg:w-[clamp(200px,40vw,600px)]"
+    className={`${fadeInEffect ? "blur-fade-in" : ""}  h-[200px] flex items-center px-8 show infinite-bounce [animation-delay:120ms;] lg:w-[clamp(200px,40vw,600px)]`}
     transitionName="profile"
     labelName="profile"
   >
@@ -63,7 +69,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(200px,30vw,600px)] lg:ml-10  h-[140px] flex items-center px-8 mb-5 show infinite-bounce [animation-delay:230ms;] "
+    className={`${fadeInEffect ? "blur-fade-in" : ""} w-[clamp(200px,30vw,600px)] lg:ml-10  h-[140px] flex items-center px-8 mb-5 show infinite-bounce [animation-delay:230ms;] `}
     labelName="Certificates"
   >
     <ViewMore href="/profile" />
@@ -80,7 +86,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(400px,50vw,800px)] lg:ml-10 h-[270px] flex items-center px-8 lg:mt-20 show infinite-bounce [animation-delay:340ms;] "
+    className={`${fadeInEffect ? "blur-fade-in" : ""} w-[clamp(400px,50vw,800px)] lg:ml-10 h-[270px] flex items-center px-8 lg:mt-20 show infinite-bounce [animation-delay:340ms;] `}
     labelName="Projects"
   >
     <ViewMore href="/profile" />
@@ -105,7 +111,7 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
   <Blur
-    className="w-[clamp(200px,20vw,300px)] lg:ml-28 mb-10 h-[240px] flex items-center px-8 md:mt-0 mt-20 show infinite-bounce [animation-delay:300ms;] "
+    className={`${fadeInEffect ? "blur-fade-in" : ""} w-[clamp(200px,20vw,300px)] lg:ml-28 mb-10 h-[240px] flex items-center px-8 md:mt-0 mt-20 show infinite-bounce [animation-delay:300ms;] `}
     labelName="Contact"
   >
     <ViewMore href="/profile" />
@@ -122,38 +128,3 @@ import ViewMore from "./svg/ViewMore.astro";
     </section>
   </Blur>
 </main>
-
-<script>
-  let isFirstJoin: string | boolean | null =
-    sessionStorage.getItem("isFirstJoin");
-
-  if (isFirstJoin == null) {
-    isFirstJoin = true;
-  } else {
-    isFirstJoin = false;
-  }
-
-  const blurs = document.querySelectorAll(".blur-item");
-
-  blurs.forEach((blur) => {
-    if (isFirstJoin) {
-      blur.classList.add("blur-fade-in");
-    } 
-  });
-
-  sessionStorage.setItem("isFirstJoin", "false");
-
-  function restartAnimation() {
-    const animatedElements = document.querySelectorAll(".blur-item");
-    if (animatedElements) {
-      animatedElements.forEach((element) => {
-        (element as HTMLElement).style.animation = "none";
-
-        (element as HTMLElement).offsetHeight;
-        (element as HTMLElement).style.animation = "";
-      });
-    }
-  }
-
-  window.addEventListener("astro:render", restartAnimation);
-</script>
