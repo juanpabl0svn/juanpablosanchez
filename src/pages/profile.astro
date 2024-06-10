@@ -1,27 +1,8 @@
 ---
-import Header from "../components/Header.astro";
-import { ViewTransitions } from "astro:transitions";
 import ProfileView from "../components/Profile.astro";
-
-const title = "Juan Pa Sánchez";
+import Layout from "../Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="/styles/style.css" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <ViewTransitions />
-    <Header />
-    <ProfileView />
-    <script>
-      const $ = (element: string) => document.querySelector(element);
-      const $$ = (elements: string) => document.querySelectorAll(elements);
-    </script>
-  </body>
-</html>
+<Layout>
+  <ProfileView />
+</Layout>
