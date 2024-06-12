@@ -1,0 +1,75 @@
+---
+import Blur from "../components/global/Blur.astro";
+import ViewLess from "./svg/ViewLess.astro";
+---
+
+<Blur
+  transitionName="profile"
+  className="mx-10 mt-10 min-h-[80vh] h-full pt-14"
+  labelName="Certificates"
+>
+  <ViewLess />
+
+  <article class="certifies">
+    <div>
+      <img
+        src="/images/cloud101.png"
+        transition:name="cloud101"
+        alt=""
+        class="w-48 rotate"
+      />
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut debitis
+        cumque error alias est explicabo nobis, nisi esse dolore, fuga eum
+        nostrum autem voluptatibus. Nisi quia accusantium quae odio.
+      </p>
+    </div>
+
+    <div>
+      <img
+        src="/images/lifelong-learning.png"
+        transition:name="lifelong"
+        alt=""
+        class="w-48 rotate"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut debitis
+        cumque error alias est explicabo nobis, nisi esse dolore, fuga eum
+        nostrum autem voluptatibus. Nisi quia accusantium quae odio.
+      </p>
+    </div>
+
+    <div>
+      <img
+        src="/images/scrum-foundation.png"
+        alt=""
+        transition:name="scrum"
+        class="w-48 rotate"
+      />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ut debitis
+        cumque error alias est explicabo nobis, nisi esse dolore, fuga eum
+        nostrum autem voluptatibus. Nisi quia accusantium quae odio.
+      </p>
+    </div>
+  </article>
+</Blur>
+<style>
+  .certifies {
+    width: 100%;
+    display: grid;
+    place-items: center;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      gap: 10px;
+    }
+
+    & > div:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+</style>

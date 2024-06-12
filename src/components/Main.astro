@@ -72,12 +72,12 @@ const { fadeInEffect = false }: Props = Astro.props;
     className={`${fadeInEffect ? "blur-fade-in" : ""} w-[clamp(260px,30vw,600px)] lg:ml-10  h-[170px] flex items-center px-8 mb-5 show infinite-bounce [animation-delay:230ms;] `}
     labelName="Certificates"
   >
-    <ViewMore href="/profile" />
+    <ViewMore href="/certificates" />
 
     <section class="w-full h-20 flex mt-8 justify-center gap-2 items-center">
-      <img src="/images/cloud101.png" alt="" class="w-20" />
-      <img src="/images/lifelong-learning.png" alt="" class="w-20" />
-      <img src="/images/scrum-foundation.png" alt="" class="w-20" />
+      <img src="/images/cloud101.png" transition:name="cloud101" alt="" class="w-20 rotate" />
+      <img src="/images/lifelong-learning.png" transition:name='lifelong' alt="" class="w-20 rotate" />
+      <img src="/images/scrum-foundation.png" alt="" transition:name="scrum" class="w-20 rotate" />
     </section>
   </Blur>
   <Blur
@@ -87,51 +87,25 @@ const { fadeInEffect = false }: Props = Astro.props;
     <ViewMore href="/profile" />
 
     <section class="w-full h-20 flex gap-2 items-center justify-center">
-      <div class="cursor-pointer">
-        <div
-          class="bg-white h-28 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out [&:hover_~_div]:opacity-100"
-        >
-        </div>
-        <div
-          class="bg-black w-full h-2 blur-lg opacity-0 transition-all duration-300 ease-in-out"
-        >
-        </div>
+      <div class="floating-project">
+        <div></div>
+        <div></div>
       </div>
 
-      <div class="cursor-pointer">
-        <div
-          class="bg-white h-28 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out [&:hover_~_div]:opacity-100"
-        >
-        </div>
-        <div
-          class="bg-black w-full h-2 blur-lg opacity-0 transition-all duration-300 ease-in-out"
-        >
-        </div>
+      <div class="floating-project">
+        <div></div>
+        <div></div>
       </div>
 
-      <div class="cursor-pointer">
-        <div
-          class="bg-white h-28 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out [&:hover_~_div]:opacity-100"
-        >
-        </div>
-        <div
-          class="bg-black w-full h-2 blur-lg opacity-0 transition-all duration-300 ease-in-out"
-        >
-        </div>
+      <div class="floating-project">
+        <div></div>
+        <div></div>
       </div>
 
-      <div class="hidden lg:block cursor-pointer">
-        <div
-          class="bg-white h-28 aspect-square rounded-sm hover:-translate-y-5 transition-all duration-200 ease-in-out [&:hover_~_div]:opacity-100"
-        >
-        </div>
-        <div
-          class="bg-black w-full h-2 blur-lg opacity-0 transition-all duration-300 ease-in-out"
-        >
-        </div>
+      <div class="hidden lg:block floating-project">
+        <div></div>
+        <div></div>
       </div>
-
-  
     </section>
   </Blur>
   <Blur
@@ -141,14 +115,14 @@ const { fadeInEffect = false }: Props = Astro.props;
     <ViewMore href="/profile" />
 
     <section class="w-full text-center">
-      <h1 class="font-bold text-white">Software Developer</h1>
-
-      <div class="flex justify-center gap-2 items-start">
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-        <div class="bg-white h-14 rounded-full aspect-square"></div>
-      </div>
+      <p class="mb-10 text-white font-jejuHallasan">
+        ¿Quieres desarrollador una app?
+      </p>
+      <button
+        class="bg-blue-500/50 text-white px-2 py-1 rounded-sm transition-all duration-200 ease-in-out hover:bg-blue-500/90"
+      >
+        Contactame
+      </button>
     </section>
   </Blur>
 </main>
