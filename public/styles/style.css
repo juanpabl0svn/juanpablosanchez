@@ -153,7 +153,7 @@ body {
 }
 
 .blur-fade-in {
-  animation: show var(--timing-show, 1.2s) ease-in-out,
+  animation: show var(--timing-show, 1.2s) ease-in-out forwards,
     infinite-bounce var(--timing-bounce, 3.2s) infinite ease-in-out;
 }
 
