@@ -5,6 +5,7 @@
   <label class="switch" for="switch">
     <input type="checkbox" id="switch" />
     <span class="slider"></span>
+    <span class="decoration"></span>
   </label>
   <section class="flex gap-5 items-center">
     <a href="/" class="flex gap-5 items-center">
@@ -25,10 +26,7 @@
         type="checkbox"
       />
       <label class="dropdown-container" for="dropdown"></label>
-      <div class="input-wrapper">
-        Spanish
-
-      </div>
+      <div class="input-wrapper">Spanish</div>
       <div class="select-wrapper">
         <ul>
           <li class="Austria">
@@ -50,6 +48,7 @@
     display: inline-block;
     width: 3.5em;
     height: 2em;
+    cursor: pointer;
   }
 
   /* Hide default HTML checkbox */
@@ -61,7 +60,7 @@
 
   /* The slider */
   .slider {
-    --background: #161a1e;
+    --background: #20262c;
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -88,8 +87,40 @@
     transition: 0.5s;
   }
 
+  .decoration {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    right: 20%;
+    top: 15%;
+    background: #e5f041e6;
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+    box-shadow:
+      -7px 10px 0 #e5f041e6,
+      8px 15px 0 #e5f041e6,
+      -17px 1px 0 #e5f041e6,
+      -20px 10px 0 #e5f041e6,
+      -7px 23px 0 #e5f041e6,
+      -15px 25px 0 #e5f041e6;
+  }
+
+  input:checked ~ .decoration{
+    transform: translateX(-20px);
+    width: 10px;
+    height: 10px;
+    background: white;
+    box-shadow: -12px 0 0 white,
+      -6px 0 0 1.6px white,
+      5px 15px 0 1px white,
+      1px 17px 0 white,
+      10px 17px 0 white;
+  }
+
   input:checked + .slider {
-    background-color: #688db7;
+    background-color: #5494de;
   }
 
   input:checked + .slider:before {
