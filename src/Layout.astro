@@ -23,6 +23,8 @@ const title = "Juan Pa Sánchez";
       window.addEventListener("click", (e) => {
         const location = window.location.pathname;
 
+        const document = window.document as any;
+
         if (location === "/home" || location === "/") {
           return;
         }
