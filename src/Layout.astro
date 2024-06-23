@@ -14,9 +14,27 @@ const title = "Juan Pa Sánchez";
     <link rel="stylesheet" href="/styles/style.css" />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="body">
     <ViewTransitions />
     <Header />
     <slot />
+
+    <script>
+      window.addEventListener("click", (e) => {
+        const location = window.location.pathname;
+
+        if (location === "/home" || location === "/") {
+          return;
+        }
+
+        if ((e.target as HTMLElement).tagName === "BODY") {
+          if (document.startViewTransition) {
+            document.startViewTransition(() => {
+              window.history.back();
+            });
+          }
+        }
+      });
+    </script>
   </body>
 </html>
