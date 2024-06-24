@@ -30,11 +30,8 @@ const title = "Juan Pa Sánchez";
         }
 
         if ((e.target as HTMLElement).tagName === "BODY") {
-          if (document.startViewTransition) {
-            document.startViewTransition(() => {
-              window.history.back();
-            });
-          }
+          const anchorToGetHome = document.querySelector("a[href='/home']");
+          anchorToGetHome.click();
         }
       });
     </script>

@@ -159,7 +159,7 @@ body {
 
 .icon {
   stroke: rgba(255, 255, 255, 0.6);
-} 
+}
 
 .item {
   display: grid;
@@ -248,6 +248,3 @@ body {
     transform: translateY(0);
   }
 }
-
-
-

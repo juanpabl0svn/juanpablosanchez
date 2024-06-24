@@ -75,9 +75,24 @@ const { fadeInEffect = false }: Props = Astro.props;
     <ViewMore href="/certificates" />
 
     <section class="w-full h-20 flex mt-8 justify-center gap-2 items-center">
-      <img src="/images/cloud101.png" transition:name="cloud101" alt="" class="w-20 rotate" />
-      <img src="/images/lifelong-learning.png" transition:name='lifelong' alt="" class="w-20 rotate" />
-      <img src="/images/scrum-foundation.png" alt="" transition:name="scrum" class="w-20 rotate" />
+      <img
+        src="/images/cloud101.png"
+        transition:name="cloud101"
+        alt=""
+        class="w-20 rotate"
+      />
+      <img
+        src="/images/lifelong-learning.png"
+        transition:name="lifelong"
+        alt=""
+        class="w-20 rotate"
+      />
+      <img
+        src="/images/scrum-foundation.png"
+        alt=""
+        transition:name="scrum"
+        class="w-20 rotate"
+      />
     </section>
   </Blur>
   <Blur
@@ -87,22 +102,22 @@ const { fadeInEffect = false }: Props = Astro.props;
     <ViewMore href="/projects" />
 
     <section class="w-full h-20 flex gap-2 items-center justify-center">
-      <div class="floating-project">
+      <div class="floating-project" transition:name="project-1">
         <div></div>
         <div></div>
       </div>
 
-      <div class="floating-project">
+      <div class="floating-project" transition:name="project-2">
         <div></div>
         <div></div>
       </div>
 
-      <div class="floating-project">
+      <div class="floating-project" transition:name="project-3">
         <div></div>
         <div></div>
       </div>
 
-      <div class="hidden lg:block floating-project">
+      <div class="hidden lg:block floating-project" transition:name="project-4">
         <div></div>
         <div></div>
       </div>
@@ -112,7 +127,7 @@ const { fadeInEffect = false }: Props = Astro.props;
     className={`${fadeInEffect ? "opacity-0 blur-fade-in" : ""} w-[clamp(200px,20vw,300px)] lg:ml-28 mb-10 h-[240px] flex items-center px-8 md:mt-0 mt-20 show infinite-bounce [animation-delay:300ms;] `}
     labelName="Contact"
   >
-    <ViewMore href="/profile" />
+    <ViewMore href="/contact" />
 
     <section class="w-full text-center">
       <p class="mb-10 text-white font-jejuHallasan">
