@@ -1,11 +1,10 @@
 ---
-import Header from "./components/Header.astro";
 import { ViewTransitions } from "astro:transitions";
 
 const title = "Juan Pa Sánchez";
 ---
 
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -14,26 +13,9 @@ const title = "Juan Pa Sánchez";
     <link rel="stylesheet" href="/styles/style.css" />
     <title>{title}</title>
   </head>
+  <ViewTransitions />
   <body class="body">
-    <ViewTransitions />
-    <Header />
+    <div class="bubble"></div>
     <slot />
-
-    <script>
-      window.addEventListener("click", (e) => {
-        const location = window.location.pathname;
-
-        const document = window.document as any;
-
-        if (location === "/home" || location === "/") {
-          return;
-        }
-
-        if ((e.target as HTMLElement).tagName === "BODY") {
-          const anchorToGetHome = document.querySelector("a[href='/home']");
-          anchorToGetHome.click();
-        }
-      });
-    </script>
   </body>
 </html>
