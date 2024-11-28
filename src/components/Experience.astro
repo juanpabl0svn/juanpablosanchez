@@ -1,0 +1,33 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import ExperienceItem from "./ExperienceItem.astro";
+
+const { lang } = Astro.params;
+
+const t = useTranslations(lang);
+
+const EXPERIENCE = [
+  {
+    date: "2024/07 - " + t("current"),
+    title: "Software Developer",
+    company: "Spider Security S.A.S",
+    description: t("experience.spider-security"),
+  },
+  {
+    date: "2023/08 - 2024/07",
+    title: "Software Developer Jr.",
+    company: "DNA Universe",
+    description: t("experience.dna-universe"),
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
