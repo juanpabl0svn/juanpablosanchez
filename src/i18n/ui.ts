@@ -8,8 +8,6 @@ export const languages = {
 export const defaultLang = 'es';
 
 
-
-
 export const ui = {
     en: {
         'title': 'Software full stack developer',
@@ -31,7 +29,9 @@ export const ui = {
         "deep-empire-bros": "Deep Empire Bros is an association of lawyers and financiers who provide legal and financial advice services for all types of companies. The page was made with Next and TailwindCSS.",
         "about-me.description.1": `My name is Juan Pablo Sanchez, I am ${AGE} years old, I am a <strong>Systems Engineer</strong> from the University of Medellín, here in Colombia. Since I was a child I have been interested in the world of technology, mainly the functioning of the modern world: how the internet works, signals, electricity and how it is possible that a computer can do so many things through <strong>1 and 0</strong>.`,
         "about-me.description.2": "I am an <strong>enthusiastic programmer</strong>, I love supporting projects, teaching and learning a little about everything. I found my passion for <strong>web development</strong> and I feel that it is the place where I can contribute the most to the community. Every day I am more impressed by the rapid progress that this has.",
-        "about-me.description.3": "In my day to day, I try to teach and give back some of what this incredible world has given me in my life, both to work colleagues, friends and family. I love sharing knowledge and learning from others. This world of technology fascinates me because we share everything and we have the same goal: <strong>learn, improve and teach</strong>."
+        "about-me.description.3": "In my day to day, I try to teach and give back some of what this incredible world has given me in my life, both to work colleagues, friends and family. I love sharing knowledge and learning from others. This world of technology fascinates me because we share everything and we have the same goal: <strong>learn, improve and teach</strong>.",
+        "cv.spanish": "CV Spanish",
+        "cv.english": "CV English",
 
 
 
@@ -56,7 +56,9 @@ export const ui = {
         "deep-empire-bros": "Deep Empire Bros es una asociación de abogados y financieros los cuales proporcionan servicios de asesoría legal y financiera para todo tipo de empresa. La página fue realizada con Next y TailwindCSS.",
         "about-me.description.1": `Me llamo Juan Pablo Sanchez, tengo ${AGE} años, soy <strong>Ingeniero de Sistemas</strong> de la Universidad de Medellín, aquí en Colombia. Desde pequeño me ha interesado el mundo de la tecnología, principalmente el funcionamiento del mundo moderno: cómo funciona el internet, las señales, la electricidad y cómo es posible que un computador pueda hacer tantas cosas mediante <strong>1 y 0</strong>.`,
         "about-me.description.2": "Soy un <strong>programador entusiasta</strong>, me encanta apoyar proyectos, enseñar y aprender un poco sobre todo. Encontré mi pasión por el <strong>desarrollo web</strong> y siento que es el lugar donde puedo aportar más a la comunidad. Cada día me impresiona más el rápido progreso que tiene este.",
-        "about-me.description.3": "En mi día a día, trato de enseñar y devolver algo de lo que este increíble mundo me ha aportado en mi vida, tanto a compañeros de trabajo, amigos y familiares. Me encanta compartir conocimiento y aprender de los demás. Este mundo de la tecnología me fascina porque compartimos todo y tenemos un mismo objetivo: <strong>aprender, mejorar y enseñar</strong>."
+        "about-me.description.3": "En mi día a día, trato de enseñar y devolver algo de lo que este increíble mundo me ha aportado en mi vida, tanto a compañeros de trabajo, amigos y familiares. Me encanta compartir conocimiento y aprender de los demás. Este mundo de la tecnología me fascina porque compartimos todo y tenemos un mismo objetivo: <strong>aprender, mejorar y enseñar</strong>.",
+        "cv.spanish": "CV Español",
+        "cv.english": "CV Inglés",
 
     },
 } as const;

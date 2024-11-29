@@ -19,7 +19,12 @@ const AGE = CURRENT_YEAR - BORN_DATE;
 
 const ALT_IMAGE_PROFILE = "Juan Pablo Sánchez Villegas"
 
+const CV = {
+    SPANISH: "/CV_ES.pdf",
+    ENGLISH: "/CV_EN.pdf"
+}
+
 export {
     EMAIL, GITHIUB, LINKEDIN,
-    CURRENT_YEAR, BORN_DATE, AGE, ALT_IMAGE_PROFILE
+    CURRENT_YEAR, BORN_DATE, AGE, ALT_IMAGE_PROFILE, CV
 }

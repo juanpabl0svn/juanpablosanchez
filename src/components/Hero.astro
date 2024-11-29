@@ -5,7 +5,7 @@ import GitHubIcon from "@/components/icons/GitHub.astro";
 import MailIcon from "@/components/icons/Mail.astro";
 import SocialPill from "@/components/SocialPill.astro";
 import { useTranslations } from "@/i18n/utils";
-import { ALT_IMAGE_PROFILE, EMAIL, GITHIUB, LINKEDIN } from "@/utils/constants";
+import { ALT_IMAGE_PROFILE, EMAIL, GITHIUB, LINKEDIN, CV } from "@/utils/constants";
 
 const { lang } = Astro.params;
 
@@ -53,6 +53,13 @@ const t = useTranslations(lang);
     <SocialPill href={GITHIUB.ref}>
       <GitHubIcon class="size-4" />
       Github
+    </SocialPill>
+    <SocialPill href={CV.SPANISH}>
+      {t("cv.spanish")}
+    </SocialPill>
+    <SocialPill href={CV.ENGLISH}>
+      {t("cv.english")}
+
     </SocialPill>
   </nav>
 </div>
