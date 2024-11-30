@@ -6,6 +6,7 @@ import BriefcaseIcon from "./icons/Briefcase.astro";
 import CodeIcon from "./icons/Code.astro";
 import OpenSourceIcon from "./icons/OpenSource.astro";
 import ProfileCheckIcon from "./icons/ProfileCheck.astro";
+import LangToggle from "./LangToggle.astro";
 
 const { lang } = Astro.params;
 
@@ -63,7 +64,9 @@ const navItems = [
         </a>
       ))
     }
+    <span class="line"></span>
     <ThemeToggle />
+    <LangToggle />
   </nav>
 </header>
 
@@ -111,21 +114,10 @@ const navItems = [
 
 <style>
   nav {
-    animation: nav-shadown 1s linear both;
-    animation-timeline: scroll();
-    animation-range: 0 100px;
+    @apply dark:bg-gray-800/50 bg-white/50;
   }
 
-  nav {
-    @apply dark:bg-gray-800/90 bg-white/50;
-  }
-
-  @keyframes nav-shadown {
-    0% {
-      @apply dark:bg-gray-800/0 bg-white/0;
-    }
-    to {
-      @apply shadow-lg ring-1 backdrop-blur ring-white/10;
-    }
+  .line{
+    @apply h-[.8px] my-2 bg-white/50 w-full md:h-5 md:w-[0.8px] md:my-0 md:mx-2 ;
   }
 </style>

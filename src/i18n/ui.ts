@@ -1,8 +1,8 @@
 import { AGE, CURRENT_YEAR } from "@/utils/constants";
 
 export const languages = {
-    en: 'English',
-    es: 'Spanish',
+    en: 'en',
+    es: 'es',
 };
 
 export const defaultLang = 'es';
