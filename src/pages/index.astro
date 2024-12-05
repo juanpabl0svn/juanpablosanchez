@@ -11,6 +11,7 @@ import Hero from "@/components/Hero.astro";
 import TitleSection from "@/components/TitleSection.astro";
 import { useTranslations } from "@/i18n/utils";
 import OpenSourceIcon from "@/components/icons/OpenSource.astro";
+import OpenSource from "@/components/OpenSource.astro";
 
 const { lang } = Astro.params;
 
@@ -44,7 +45,7 @@ const t = useTranslations(lang);
         <OpenSourceIcon class="size-8" />
         {t("open-source")}
       </TitleSection>
-      <Projects />
+      <OpenSource  />
     </SectionContainer>
 
     <SectionContainer id="about-me">
