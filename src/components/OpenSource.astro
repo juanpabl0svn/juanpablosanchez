@@ -42,11 +42,15 @@ const PROJECTS = [
               {description}
             </div>
             <footer class="flex items-end justify-start mt-4 gap-x-4">
-              {link && (
+              {link ? (
                 <LinkButton href={link}>
                   <Link class="size-4" />
-                  Preview
+                  {t("preview")}
                 </LinkButton>
+              ) : (
+                <button class="flex items-center gap-x-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  {t("not-available")}
+                </button>
               )}
             </footer>
           </div>

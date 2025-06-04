@@ -34,10 +34,9 @@ export const ui = {
         "about-me.description.3": "In my day to day, I try to teach and give back some of what this incredible world has given me in my life, both to work colleagues, friends and family. I love sharing knowledge and learning from others. This world of technology fascinates me because we share everything and we have the same goal: <strong>learn, improve and teach</strong>.",
         "cv.spanish": "CV Spanish",
         "cv.english": "CV English",
-        "open-source.switch": "Switch toggle to change the theme of the page"
-
-
-
+        "open-source.switch": "Switch toggle to change the theme of the page",
+        "not-available" : "Not available",
+        "preview": "Preview",
     },
     es: {
         'title': 'Desarrollador de software Full Stack',
@@ -63,7 +62,9 @@ export const ui = {
         "about-me.description.3": "En mi día a día, trato de enseñar y devolver algo de lo que este increíble mundo me ha aportado en mi vida, tanto a compañeros de trabajo, amigos y familiares. Me encanta compartir conocimiento y aprender de los demás. Este mundo de la tecnología me fascina porque compartimos todo y tenemos un mismo objetivo: <strong>aprender, mejorar y enseñar</strong>.",
         "cv.spanish": "CV Español",
         "cv.english": "CV Inglés",
-        "open-source.switch": "Switch toggle para cambiar el tema de la página"
+        "open-source.switch": "Switch toggle para cambiar el tema de la página",
+        "not-available": "No disponible",
+        "preview": "Vista previa",
 
 
     },
